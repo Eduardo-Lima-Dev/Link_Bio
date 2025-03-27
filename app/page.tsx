@@ -6,14 +6,28 @@ import { useCallback } from "react";
 import { loadSlim } from "tsparticles-slim";
 import Particles from "react-particles";
 import type { Container, Engine } from "tsparticles-engine";
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Home() {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
 
+  const handlePortfolioClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    toast('Ainda em desenvolvimento!', {
+      icon: '🚧',
+      style: {
+        borderRadius: '10px',
+        background: '#333',
+        color: '#fff',
+      },
+    });
+  };
+
   return (
     <>
+      <Toaster position="top-center" />
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -136,9 +150,8 @@ export default function Home() {
         {/* Portfolio Link */}
         <div className="bg-black/40 p-[2px] rounded-2xl bg-gradient-to-r from-purple-600/50 to-purple-400/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
           <a 
-            href="https://portfolio-eduardo-dev.vercel.app" 
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            onClick={handlePortfolioClick}
             className="flex flex-col items-center gap-3 bg-black/40 p-6 rounded-2xl hover:bg-purple-600/20 transition"
           >
             <Globe className="w-8 h-8" />
