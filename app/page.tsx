@@ -134,25 +134,29 @@ export default function Home() {
         </div>
 
         {/* Portfolio Link */}
-        <a 
-          href="https://portfolio-eduardo-dev.vercel.app" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center gap-3 bg-purple-600 hover:bg-purple-700 transition p-6 rounded-2xl"
-        >
-          <Globe className="w-8 h-8" />
-          <span className="text-lg font-medium text-center">Meu Portfolio</span>
-        </a>
+        <div className="bg-black/40 p-[2px] rounded-2xl bg-gradient-to-r from-purple-600/50 to-purple-400/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+          <a 
+            href="https://portfolio-eduardo-dev.vercel.app" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-3 bg-black/40 p-6 rounded-2xl hover:bg-purple-600/20 transition"
+          >
+            <Globe className="w-8 h-8" />
+            <span className="text-lg font-medium text-center">Meu Portfolio</span>
+          </a>
+        </div>
 
         {/* CV Download Link */}
-        <a 
-          href="/eduardo-cv.pdf" 
-          download
-          className="flex flex-col items-center gap-3 bg-purple-600 hover:bg-purple-700 transition p-6 rounded-2xl"
-        >
-          <Download className="w-8 h-8" />
-          <span className="text-lg font-medium text-center">Download CV</span>
-        </a>
+        <div className="bg-black/40 p-[2px] rounded-2xl bg-gradient-to-r from-purple-600/50 to-purple-400/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+          <a 
+            href="/eduardo-cv.pdf" 
+            download
+            className="flex flex-col items-center gap-3 bg-black/40 p-6 rounded-2xl hover:bg-purple-600/20 transition"
+          >
+            <Download className="w-8 h-8" />
+            <span className="text-lg font-medium text-center">Download CV</span>
+          </a>
+        </div>
 
         {/* Seção da Playlist */}
         <div className="bg-black/40 p-6 rounded-2xl">
