@@ -70,8 +70,7 @@ export default function Home() {
         }}
       />
       <main className="relative z-10 min-h-screen p-4 max-w-2xl mx-auto space-y-6">
-        {/* Profile Header */}
-        <div className="flex items-center bg-black/20 p-6 rounded-2xl backdrop-blur-sm">
+        <div className="flex items-center bg-black/20 px-8 py-6 rounded-2xl backdrop-blur-sm">
           <div className="rounded-2xl p-[2px] bg-gradient-to-r from-purple-600/50 to-purple-400/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
             <Image
               src="/assets/eduardo.jpg"
@@ -98,16 +97,14 @@ export default function Home() {
           />
         </div>
 
-        {/* Bio Description */}
         <div className="bg-black/40 p-[2px] rounded-2xl bg-gradient-to-r from-purple-600/50 to-purple-400/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
-          <div className="bg-black/40 p-6 rounded-2xl">
+          <div className="bg-black/40 px-8 py-6 rounded-2xl">
             <p className="text-zinc-300 text-center leading-relaxed">
               Sou apaixonado por música, café e Linux, e estou sempre em busca de aprender coisas novas e dar uma força para a comunidade tech. No TikTok, compartilho minha jornada de desenvolvimento com muita diversão e dicas práticas, ajudando outros devs a explorar esse universo incrível do código. Vem se juntar a essa aventura cheia de criatividade, aprendizado e, claro, muitas xícaras de café!
             </p>
           </div>
         </div>
 
-        {/* Social Media Grid */}
         <div className="grid grid-cols-2 gap-4">
           <a 
             href="https://github.com/Eduardo-Lima-Dev" 
@@ -147,7 +144,6 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Portfolio Link */}
         <div className="bg-black/40 p-[2px] rounded-2xl bg-gradient-to-r from-purple-600/50 to-purple-400/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
           <a 
             href="#"
@@ -159,7 +155,6 @@ export default function Home() {
           </a>
         </div>
 
-        {/* CV Download Link */}
         <div className="bg-black/40 p-[2px] rounded-2xl bg-gradient-to-r from-purple-600/50 to-purple-400/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
           <a 
             href="/eduardo-cv.pdf" 
@@ -171,20 +166,22 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Seção da Playlist */}
-        <div className="bg-black/40 p-6 rounded-2xl">
-          <div className="flex items-center gap-2 mb-4">
-            <Music className="w-5 h-5 text-purple-400" />
-            <p className="text-zinc-400">Minha Playlist</p>
+        <div className="bg-black/40 rounded-2xl">
+          <div className="p-6 rounded-2xl">
+            <div className="flex items-center gap-2 mb-4">
+              <Music className="w-5 h-5 text-purple-400" />
+              <p className="text-zinc-400">Minha Playlist</p>
+            </div>
+            <iframe
+              src="https://open.spotify.com/embed/playlist/2VX8TM56VBfOWN48CjfAH5?theme=0&si=eS5RhwgHTxepU7m_JZce5Q&pi=tIvUgLB0Q0ySw"
+              width="100%"
+              height="380"
+              frameBorder="0"
+              allowTransparency={true}
+              allow="encrypted-media"
+              style={{ borderRadius: '12px', margin: '0 -24px', width: 'calc(100% + 48px)' }}
+            ></iframe>
           </div>
-          <iframe
-            src="https://open.spotify.com/embed/playlist/2VX8TM56VBfOWN48CjfAH5?si=eS5RhwgHTxepU7m_JZce5Q&pi=tIvUgLB0Q0ySw"
-            width="100%"
-            height="380"
-            frameBorder="0"
-            allowTransparency={true}
-            allow="encrypted-media"
-          ></iframe>
         </div>
       </main>
     </>
