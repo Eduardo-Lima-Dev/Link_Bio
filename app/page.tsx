@@ -158,7 +158,7 @@ export default function Home() {
         <div className="bg-black/40 p-[2px] rounded-2xl bg-gradient-to-r from-purple-600/50 to-purple-400/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
           <a 
             href="/eduardo-cv.pdf" 
-            download="eduardo-lima-cv.pdf"
+            download="eduardo-cv.pdf"
             className="flex flex-col items-center gap-3 bg-black/40 p-6 rounded-2xl hover:bg-purple-600/20 transition"
           >
             <Download className="w-8 h-8" />
