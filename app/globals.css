@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: Monaco, monospace;
+  }
+}
+
 :root {
   --background: 0 0% 7%;
   --foreground: 0 0% 98%;

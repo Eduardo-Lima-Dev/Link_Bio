@@ -1,12 +1,34 @@
 "use client"
 
-import { Globe, Github, Linkedin, Instagram, Twitter, Music, Download } from "lucide-react";
+import { Globe, Github, Linkedin, Instagram, Music, Download } from "lucide-react";
 import Image from "next/image";
 import { useCallback } from "react";
 import { loadSlim } from "tsparticles-slim";
 import Particles from "react-particles";
 import type { Container, Engine } from "tsparticles-engine";
 import toast, { Toaster } from 'react-hot-toast';
+import { 
+  SiTypescript, 
+  SiJavascript, 
+  SiKotlin, 
+  SiFlutter, 
+  SiNodedotjs, 
+  SiNextdotjs, 
+  SiReact, 
+  SiTailwindcss 
+} from '@icons-pack/react-simple-icons';
+import { motion } from "framer-motion";
+
+const technologies = [
+  { icon: SiTypescript, name: "TypeScript" },
+  { icon: SiJavascript, name: "JavaScript" },
+  { icon: SiKotlin, name: "Kotlin" },
+  { icon: SiFlutter, name: "Flutter" },
+  { icon: SiNodedotjs, name: "Node.js" },
+  { icon: SiNextdotjs, name: "Next.js" },
+  { icon: SiReact, name: "React" },
+  { icon: SiTailwindcss, name: "Tailwind" }
+];
 
 export default function Home() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -70,6 +92,7 @@ export default function Home() {
         }}
       />
       <main className="relative z-10 min-h-screen p-4 max-w-2xl mx-auto space-y-6">
+        {/* Profile Header */}
         <div className="flex items-center bg-black/20 px-8 py-6 rounded-2xl backdrop-blur-sm">
           <div className="rounded-2xl p-[2px] bg-gradient-to-r from-purple-600/50 to-purple-400/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
             <Image
@@ -95,6 +118,43 @@ export default function Home() {
             height={50}
             className="rounded-lg"
           />
+        </div>
+
+        {/* Skills Section */}
+        <div className="bg-black/20 backdrop-blur-sm px-8 py-6 rounded-2xl overflow-hidden">
+          <motion.div 
+            className="flex"
+            animate={{
+              x: [0, -1920],
+            }}
+            transition={{
+              x: {
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "linear",
+              },
+            }}
+          >
+            {/* Primeira sequência */}
+            <div className="flex gap-12 mr-12">
+              {technologies.map((Tech, index) => (
+                <div key={index} className="flex flex-col items-center gap-2 min-w-[80px]">
+                  <Tech.icon size={24} className="text-purple-400" />
+                  <span className="text-sm text-zinc-400 whitespace-nowrap">{Tech.name}</span>
+                </div>
+              ))}
+            </div>
+            {/* Segunda sequência para loop contínuo */}
+            <div className="flex gap-12">
+              {technologies.map((Tech, index) => (
+                <div key={`repeat-${index}`} className="flex flex-col items-center gap-2 min-w-[80px]">
+                  <Tech.icon size={24} className="text-purple-400" />
+                  <span className="text-sm text-zinc-400 whitespace-nowrap">{Tech.name}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
 
         <div className="bg-black/40 p-[2px] rounded-2xl bg-gradient-to-r from-purple-600/50 to-purple-400/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">

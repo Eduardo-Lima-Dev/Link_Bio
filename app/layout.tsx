@@ -1,8 +1,13 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 
 const inter = Inter({ subsets: ['latin'] });
+const monaco = localFont({
+  src: '../public/fonts/monaco.ttf',
+  variable: '--font-monaco'
+});
 
 export const metadata: Metadata = {
   title: 'Eduardo Link Bio',
@@ -19,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR" className={`${monaco.variable}`}>
+      <body className="font-monaco">{children}</body>
     </html>
   );
 }
