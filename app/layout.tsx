@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: 'Link Bio',
   keywords: ['Eduardo Link Bio', 'Eduardo Lima', 'Desenvolvedor Web', 'Desenvolvedor Mobile'],
   icons: {
-    icon: '/logo.png',
+    icon: '/assets/Logo-Branca.png',
   }
 };
 

@@ -111,13 +111,15 @@ export default function Home() {
             </div>
           </div>
 
-          <Image
-            src="/assets/logo.png"
-            alt="Logo"
-            width={50}
-            height={50}
-            className="rounded-lg"
-          />
+          <div className="rounded-2xl p-[2px] bg-gradient-to-r">
+            <Image
+              src="/assets/logo.png"
+              alt="Logo"
+              width={80}
+              height={80}
+              className="rounded-lg"
+            />
+          </div>
         </div>
 
         {/* Skills Section */}
