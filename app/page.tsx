@@ -6,7 +6,6 @@ import { useCallback } from "react";
 import { loadSlim } from "tsparticles-slim";
 import Particles from "react-particles";
 import type { Container, Engine } from "tsparticles-engine";
-import toast, { Toaster } from 'react-hot-toast';
 import { 
   SiTypescript, 
   SiJavascript, 
@@ -15,7 +14,8 @@ import {
   SiNodedotjs, 
   SiNextdotjs, 
   SiReact, 
-  SiTailwindcss 
+  SiTailwindcss,
+  SiTiktok
 } from '@icons-pack/react-simple-icons';
 import { motion } from "framer-motion";
 
@@ -35,21 +35,8 @@ export default function Home() {
     await loadSlim(engine);
   }, []);
 
-  const handlePortfolioClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    toast('Ainda em desenvolvimento!', {
-      icon: '🚧',
-      style: {
-        borderRadius: '10px',
-        background: '#333',
-        color: '#fff',
-      },
-    });
-  };
-
   return (
     <>
-      <Toaster position="top-center" />
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -196,20 +183,21 @@ export default function Home() {
             <span className="text-lg font-medium">Instagram</span>
           </a>
           <a 
-            href="https://instagram.com/lima_ofc" 
+            href="https://www.tiktok.com/@um.simples.dev" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-black/20 backdrop-blur-sm p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-purple-600/20 transition-colors group"
           >
-            <Instagram className="w-12 h-12 group-hover:text-purple-400 transition-colors" />
-            <span className="text-lg font-medium">Instagram Pessoal</span>
+            <SiTiktok className="w-12 h-12 group-hover:text-purple-400 transition-colors" />
+            <span className="text-lg font-medium">TikTok</span>
           </a>
         </div>
 
         <div className="bg-black/40 p-[2px] rounded-2xl bg-gradient-to-r from-purple-600/50 to-purple-400/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
           <a 
-            href="#"
-            onClick={handlePortfolioClick}
+            href="https://portfolio-eduardo-dev.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex flex-col items-center gap-3 bg-black/40 p-6 rounded-2xl hover:bg-purple-600/20 transition"
           >
             <Globe className="w-8 h-8" />
